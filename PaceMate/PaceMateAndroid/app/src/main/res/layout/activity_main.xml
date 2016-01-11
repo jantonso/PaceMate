@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:id="@+id/layout"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="PaceMate"
+        android:id="@+id/title"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />layout
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Create new workout:"
+        android:id="@+id/h1"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Coach:"
+        android:id="@+id/coach"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/h1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        android:text="name of coach..."
+        android:id="@+id/coach_val"
+        android:layout_alignTop="@+id/coach"
+        android:layout_toRightOf="@+id/coach"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Athlete:"
+        android:id="@+id/athlete"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/coach_val"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="2"
+        android:text="name of athlete..."
+        android:id="@+id/athlete_val"
+        android:layout_alignTop="@+id/athlete"
+        android:layout_toRightOf="@+id/athlete"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Description:"
+        android:id="@+id/description"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/athlete_val"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:text="short description of the workout..."
+        android:id="@+id/description_val"
+        android:layout_alignTop="@+id/description"
+        android:layout_toRightOf="@+id/description"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Distance to run (50m):"
+        android:id="@+id/distance"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/description_val"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="400"
+        android:id="@+id/distance_val"
+        android:layout_alignTop="@+id/distance"
+        android:layout_toRightOf="@+id/distance"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="Pace to run (seconds):"
+        android:id="@+id/pace"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@+id/distance"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="60"
+        android:id="@+id/pace_val"
+        android:layout_alignTop="@+id/pace"
+        android:layout_toRightOf="@+id/pace"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create"
+        android:id="@+id/submit_button"
+        android:layout_below="@+id/pace"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+    />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="View Past Workouts"
+        android:id="@+id/results_button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

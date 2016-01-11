@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  if (user)
+    .container
+      h1 Add a new workout
+      form(role='form', action="/add_workout",method="post", style='max-width: 300px;')
+        .form-group
+          input.form-control(type='text', name="coach", placeholder='Coach')
+        .form-group          
+          input.form-control(type='text', name="athlete", placeholder='Athlete')
+        .form-group          
+          input.form-control(type='text', name="description", placeholder='Description of workout')
+        .form-group          
+          input.form-control(type='date', name="date", placeholder='Date of workout')
+        .form-group
+          input.form-control(type='text', name="target_distance", placeholder='Target distance for the workout')
+        .form-group
+          input.form-control(type='text', name="target_pace", placeholder='Target pace for the workout')
+        .form-group          
+          input.form-control(type='text', name="split_distances", placeholder='Split distances (seperated by commas)')
+        .form-group          
+          input.form-control(type='text', name="split_times", placeholder='Split times (seperated by commas)')
+        button.btn.btn-default(type='submit') Submit
+      if (error_message)
+        p error_message
+  else
+    h1 You are not supposed to be here...  

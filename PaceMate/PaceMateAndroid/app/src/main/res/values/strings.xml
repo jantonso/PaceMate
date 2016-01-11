@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PaceMate</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_workout_results">WorkoutResults</string>
+    <string name="title_activity_workout">WorkoutActivity</string>
+</resources>

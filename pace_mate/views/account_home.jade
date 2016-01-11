@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  if (user)
+    .container
+      h1 #{user.username}'s PaceMate
+      p.lead Your workouts:
+      hr
+      each w, index in (workouts)
+        p Workout #{index}: #{w.description}, #{w.date}
+        p Coach: #{w.coach}, Athlete: #{w.athlete}
+        p Target_Distance: #{w.target_distance}, Target_Pace: #{w.target_pace}
+        table
+          tr
+            each d in (w.split_distances)  
+              td #{d}
+          tr
+            each t in (w.split_times)
+              td #{t}
+          tr
+            The View your run performance: 
+            a(href=url_to_plot) here
+
+        hr
+      form(action="/add_workout", method="GET")
+          button(class="btn btn-lg btn-primary", type="submit") Add new workout
+      form(action="/logout", method="GET")
+          button(class="btn btn-lg btn-primary", type="submit") Logout
+  if (!user)
+    h1 You not supposed to be here.
